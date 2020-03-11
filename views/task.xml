@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+     <record model="ir.ui.view" id="course_table_view">
+            <field name="name">date_now.table</field>
+            <field name="model">datenow</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="stop_status"/>
+                    <field name="start_date"/>
+                    <field name="calculated_date"/>
+                    <field name="time_id"/>
+
+<!--                    <field name="parent_ids" widget='many2many_tags'/>-->
+                     <button string="Time_stop" type='object' name='time_at_this_moment'/>
+                     <button string="Time_start" type='object' name='time_at_this_moment'/>
+                </tree>
+
+            </field>
+
+        </record>
+
+
+    <record model="ir.ui.view" id="date_table_view">
+            <field name="name">date_now.table</field>
+            <field name="model">datenow</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="name"/>
+<!--                    <field name="stop_status"/>-->
+<!--                    <field name="start_date"/>-->
+                    <field name="calculated_date"/>
+                    <field name="time_id"/>
+
+<!--                    <field name="parent_ids" widget='many2many_tags'/>-->
+                     <button string="Time_stop" type='object' name='time_at_this_moment'/>
+                     <button string="Time_start" type='object' name='time_at_this_moment'/>
+                </form>
+
+            </field>
+
+        </record>
+
+       <record model="ir.actions.act_window" id="time_id">
+            <field name="name">Work_date</field>
+            <field name="res_model">datenow</field>
+            <field name="view_mode">tree,form</field>
+
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the first course
+                </p>
+            </field>
+
+        </record>
+
+     <menuitem id="main_openacademy_menu" name="Open Academy"/>
+<!--     <menuitem id="courses_menu_name" name="Tamenow" parent="main_openacademy_menu"-->
+<!--                  action="datenow_id"/>-->
+    <menuitem id="courses_menu_name" name="time_id_mod" parent="main_openacademy_menu"
+                  action="time_id"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</odoo>
